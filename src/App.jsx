@@ -1,4 +1,4 @@
-import CalendarApp from "./Components/CalendarApp"
+import CalendarApp from "./Components/calendar-app"
 
 const App = () => {
   return <div className="container">
