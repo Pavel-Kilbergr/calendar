@@ -112,7 +112,10 @@ export const CalendarApp = () => {
             </div>
             <textarea placeholder="Enter Event Text (Maximum 60 Characters)"></textarea>
             <button className="event-popup-btn">Add Event</button>
-            <button className="close-event-popup">
+            <button
+              className="close-event-popup"
+              onClick={() => setShowEventPopup(false)}
+            >
               <i className="bx bx-x"></i>
             </button>
           </div>
