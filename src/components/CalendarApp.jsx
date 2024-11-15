@@ -183,7 +183,7 @@ export const CalendarApp = () => {
               }}
             ></textarea>
             <button className="event-popup-btn" onClick={handleEventSubmit}>
-              Add Event
+              {editingEvent ? 'Update Event' : 'Add Event'}
             </button>
             <button
               className="close-event-popup"
