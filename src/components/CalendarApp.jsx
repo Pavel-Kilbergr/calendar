@@ -107,6 +107,13 @@ export const CalendarApp = () => {
     setEditingEvent(event);
     setShowEventPopup(true);
   };
+
+  const handleDeleteEvent = (eventId) => {
+    const updatedEvents = events.filter((event) => event.id !== eventId);
+
+    setEvents(updatedEvents);
+  };
+
   return (
     <div className="calendar-app">
       <div className="calendar">
@@ -209,7 +216,10 @@ export const CalendarApp = () => {
                 className="bx bxs-edit-alt"
                 onClick={() => handleEventEdit(event)}
               ></i>
-              <i className="bx bxs-message-alt-x"></i>
+              <i
+                className="bx bxs-message-alt-x"
+                onClick={() => handleDeleteEvent(event.id)}
+              ></i>
             </div>
           </div>
         ))}
